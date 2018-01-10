@@ -3,7 +3,7 @@ import telebot
 import schedule
 import time
 
-bot_token = '532637906:AAHf9kCQIzYs83f84s5WhEo5jFtjFh95jp0'
+bot_token = '385628826:AAFh_1zQaLEdiscv3fF3L-mtLqamErjGBHY'
 #bot_token =  os.environ['BOT_API_TOKEN']
 
 bot = telebot.TeleBot(bot_token)
@@ -109,8 +109,6 @@ Cumulative Jackpots (If you invest in pre-sale, you get chances at each jackpot)
 Jackpot Round 1 - 288,888,888 tokens 
 Jackpot Round 2 - 388,888,888 tokens
 Jackpot Round 3 - 888,888,888 tokens
-Jackpot Round 4 - 1,888,888,888 tokens
-
-            """, parse_mode='Markdown')
+Jackpot Round 4 - 1,888,888,888 tokens""", parse_mode='Markdown')
 
 bot.polling()
