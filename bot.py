@@ -47,7 +47,7 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['ICOdate','icodate'])
 def send_welcome(message):
-    bot.reply_to(message, """Yes, Sp8de will begin as an ERC20 token""", parse_mode='Markdown')
+    bot.reply_to(message, """The Pre-ICO will last from January 8th until February 8st. The ICO will begin February 8th and will last until March 11th. Every round of the token sale will be followed by the jackpot round.""", parse_mode='Markdown')
 
 @bot.message_handler(commands=['airdrop'])
 def send_welcome(message):
@@ -85,7 +85,9 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['claim'])
 def send_welcome(message):
-    bot.reply_to(message, """Your airdrop tokens will be sent at the end of the token sale. Thank you for joining our community""", parse_mode='Markdown')
+    bot.reply_to(message, """Please stop writing "claim" as it is not necessary.
+
+Your airdrop tokens will be sent at the end of the token sale. Thank you for joining our community!""", parse_mode='Markdown')
 
 @bot.message_handler(commands=['investnow'])
 def send_welcome(message):
