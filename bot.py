@@ -8,11 +8,13 @@ bot_token =  os.environ['BOT_API_TOKEN']
 
 bot = telebot.TeleBot(bot_token)
 
-@bot.message_handler(commands=['bot', 'help','info'])
+@bot.message_handler(commands=['bot', 'Bot', 'help','Help','info', 'Info'])
 def send_welcome(message):
     bot.reply_to(message, """
     *In order to get your questions answered, please use the commands below:*
 
+    *🔥🔥🔥Beware of SCAMs, buy only at ico.sp8de.com give your EMAIL only to support@sp8de.com check that they have admin status in the group - you should always double check!!! 🔥🔥🔥*
+    
     /tokenprice - Get token price
     /tokensale - Info on how to invest in token sale
     /ICOdate - Get ICO dates
@@ -30,6 +32,7 @@ def send_welcome(message):
     /erc20 - Is it an ERC20 token? Yes.
     /tokeninfo - Info about name and type of coin
     /smartcontract - Gives Smart Contract Address
+    /scam - Scam Advice
     """,parse_mode='Markdown')
 
 @bot.message_handler(commands=['tokenprice'])
@@ -166,8 +169,14 @@ https://etherscan.io/token/0x30dda19c0b94a88ed8784868ec1e9375d9f0e27c
 The Ethereum BlockChain Explorer, API and Analytics Platform
 
 Link to forum thread: https://forum.sp8de.com/index.php?threads/the-smart-contract-address-of-sp8de-pre-sale-token-dspx-erc20.17/""", parse_mode='Markdown')
+        
+@bot.message_handler(commands=['scam'])
+def send_welcome(message):
+    bot.reply_to(message, """ *🔥🔥🔥Beware of SCAMs, buy only at ico.sp8de.com give your EMAIL only to support@sp8de.com check that they have admin status in the group - you should always double check!!! 🔥🔥🔥*
 
-@bot.message_handler(commands=['jackpots'])
+Link to forum thread: https://forum.sp8de.com/""", parse_mode='Markdown')
+
+@bot.message_handler(commands=['jackpots', 'jackpot'])
 def send_welcome(message):
     bot.reply_to(message, """The Sp8de ICO is unique. By participating in the Pre-Sale and the Sale rounds you are automatically signed up for the Jackpot rounds where you will receive free SPX. The Jackpots are simple. If you have bought SPX during the Pre-Sale and the Sale 1 rounds you will receive SPX during ALL 4 Jackpots. However, if you participated in Sale 2 you get to receive SPX only from Jackpots 2, 3, and 4. Therefore, contributing to the token sale earlier gives you the opportunity to receive more tokens later. 
     
